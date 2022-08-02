@@ -4,6 +4,9 @@ export const render = () => {
         '<span class="header-logo" alt="app logo">ES6 pwa</span>' +
         '<nav class="header-nav">' +
             '<ul class="header-nav-ul">' +
+            '   <li class="header-nav-item">' +
+                    '<a href="./index.html">Home</a>' +
+                '</li>' +
                 '<li class="header-nav-item">' +
                     '<a href="./about.html">About</a>' +
                 '</li>' +

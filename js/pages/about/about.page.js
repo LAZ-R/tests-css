@@ -8,15 +8,28 @@ const renderView = () => {
 
     SERVICE_PWA.setHTMLTitle(pageTitle);
     
-    const page = document.createElement('div');
+    /* const page = document.createElement('div');
     page.setAttribute('id', 'page');
     page.setAttribute('class', 'page');
     page.appendChild(document.createElement('h1')).innerHTML =
         pageTitle;
     page.appendChild(document.createElement('p')).innerHTML =
-        'Made by laz-R with ♥';
+        'Made by laz-R with ♥'; */
+
+        const page1 = document.createElement('div');
+        page1.setAttribute('class', 'demi-main');
+        page1.style.backgroundColor = 'green';
+        page1.innerHTML = "coucou";
     
-    document.getElementById('main').appendChild(page);
+    document.getElementById('main').appendChild(page1);
+
+
+    const page2 = document.createElement('div');
+        page2.setAttribute('class', 'demi-main');
+        page2.style.backgroundColor = 'red';
+        page2.innerHTML = "coucou";
+    
+    document.getElementById('main').appendChild(page2);
 }
 
 COMPONENT_HEADER.render();
