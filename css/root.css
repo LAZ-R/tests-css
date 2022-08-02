@@ -94,6 +94,11 @@ body {
     min-height: -webkit-fill-available;
     font-family: Roboto-Regular;
     color: var(--font-color-default);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /* Main container */
@@ -108,7 +113,7 @@ main {
     margin: 0 0;
     padding: 0 0;
     background-color: pink;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 /* ==========================
