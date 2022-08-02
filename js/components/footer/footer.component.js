@@ -2,6 +2,13 @@ import * as SERVICE_PWA from '../../services/pwa.service.js'
 
 export const render = () => {
     const year = new Date().getFullYear();
+    const ghostFooter = document.createElement('div');
+    ghostFooter.setAttribute('class', 'ghost-footer');
+
+    document.getElementById('body').appendChild(ghostFooter);
+
+
+    
     const footer = document.createElement('footer');
     footer.innerHTML =
         '<div>' +

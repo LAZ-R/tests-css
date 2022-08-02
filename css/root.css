@@ -48,18 +48,18 @@ GLOBAL VARIABLES
     ----------*/
 
     /* header height */
-    --phone-header-height: 60px;
-    --tablet-header-height: 60px;
-    --desktop-header-height: 50px;
-    --widescreen-header-height: 50px;
+    --phone-header-height: 10vh;
+    --tablet-header-height: 10vh;
+    --desktop-header-height: 10vh;
+    --widescreen-header-height: 10vh;
 
     --header-height: var(--phone-header-height);
 
     /* footer height */
-    --phone-footer-height: 40px;
-    --tablet-footer-height: 40px;
-    --desktop-footer-height: 40px;
-    --widescreen-footer-height: 40px;
+    --phone-footer-height: 10vh;
+    --tablet-footer-height: 10vh;
+    --desktop-footer-height: 10vh;
+    --widescreen-footer-height: 10vh;
 
     --footer-height: var(--phone-footer-height);
 
@@ -103,9 +103,10 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 33vh;
+    height: fit-content;
+    min-height: 33vh;
     width: 100%;
-    margin: 33vh 0;
+    margin: 0 0;
     padding: 0 0;
 }
 

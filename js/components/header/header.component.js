@@ -14,4 +14,9 @@ export const render = () => {
         '</nav>';
 
     document.getElementById('body').insertBefore(header, document.getElementById('main'));
+
+
+    const ghostHeader = document.createElement('div');
+    ghostHeader.setAttribute('class', 'ghost-header');
+    document.getElementById('body').insertBefore(ghostHeader, document.getElementById('main'));
 }
