@@ -1,5 +1,6 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
 import * as COMPONENT_HEADER from "../../components/header/header.component.js";
+import * as COMPONENT_FOOTER from '../../components/footer/footer.component.js'
 
 const pageTitle = 'About';
 
@@ -20,3 +21,4 @@ const renderView = () => {
 
 COMPONENT_HEADER.render();
 renderView();
+COMPONENT_FOOTER.render();

@@ -8,7 +8,7 @@ export const render = () => {
     document.getElementById('body').appendChild(ghostFooter);
 
 
-    
+
     const footer = document.createElement('footer');
     footer.innerHTML =
         '<div>' +

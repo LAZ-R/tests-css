@@ -5,10 +5,7 @@ export const render = () => {
         '<nav class="header-nav">' +
             '<ul class="header-nav-ul">' +
                 '<li class="header-nav-item">' +
-                    '<a href="./index.html">Home</a>' +
-                '</li>' +
-                '<li class="header-nav-item">' +
-                    '<a href="./items.html">Items</a>' +
+                    '<a href="./about.html">About</a>' +
                 '</li>' +
             '</ul>' +
         '</nav>';
