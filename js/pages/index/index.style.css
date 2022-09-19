@@ -1,3 +1,21 @@
 @import url("../../../css/root.css");
 
 /* Put here any 'index.html' specific css */
+
+.fiftyPercent {
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-width: 100%;
+}
+
+.topHalf {
+    background-color: pink;
+}
+
+.bottomHalf {
+    background-color: green;
+}
