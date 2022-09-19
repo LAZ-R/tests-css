@@ -27,8 +27,7 @@ const renderView = () => {
     link.innerHTML = 'about';
     document.getElementById('footer').appendChild(link);
 
-    document.getElementById('html').style.height = '100vh';
-    document.getElementById('html').style.width = '100vw';
+    document.getElementById('html').style.height = window.innerHeight;
 
 }
 
