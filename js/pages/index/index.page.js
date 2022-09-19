@@ -10,7 +10,7 @@ const renderView = () => {
     topHalf.setAttribute('id', 'topHalf');
     topHalf.setAttribute('class', 'fiftyPercent topHalf');
     topHalf.appendChild(document.createElement('span')).innerHTML =
-        'Index content top half';
+        'Index content top half v' + SERVICE_PWA.getAppVersionNumber();
     
     document.getElementById('main').appendChild(topHalf);
 
@@ -18,7 +18,7 @@ const renderView = () => {
     bottomHalf.setAttribute('id', 'bottomHalf');
     bottomHalf.setAttribute('class', 'fiftyPercent bottomHalf');
     bottomHalf.appendChild(document.createElement('span')).innerHTML =
-        'Index content bottom half';
+        'Index content bottom half v' + SERVICE_PWA.getAppVersionNumber();
     
     document.getElementById('main').appendChild(bottomHalf);
 
@@ -26,6 +26,10 @@ const renderView = () => {
     link.setAttribute('href', './about.html');
     link.innerHTML = 'about';
     document.getElementById('footer').appendChild(link);
+
+    document.getElementById('html').style.height = '100vh';
+    document.getElementById('html').style.width = '100vw';
+
 }
 
 renderView();
