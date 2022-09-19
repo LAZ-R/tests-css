@@ -98,11 +98,25 @@ body {
     box-sizing: border-box;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
     background-color: cyan;
+}
+
+/* header */
+header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
 }
 
 /* Main container */
@@ -112,9 +126,22 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
+    height: 70%;
     min-width: 100%;
     margin: 0;
     padding: 0;
     background-color: yellow;
+}
+
+/* footer */
+footer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: red;
 }

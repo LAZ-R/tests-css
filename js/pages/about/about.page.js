@@ -10,7 +10,7 @@ const renderView = () => {
     topHalf.setAttribute('id', 'topHalf');
     topHalf.setAttribute('class', 'fiftyPercent topHalf');
     topHalf.appendChild(document.createElement('span')).innerHTML =
-        'Index content top half';
+        'About content top half';
     
     document.getElementById('main').appendChild(topHalf);
 
@@ -18,13 +18,13 @@ const renderView = () => {
     bottomHalf.setAttribute('id', 'bottomHalf');
     bottomHalf.setAttribute('class', 'fiftyPercent bottomHalf');
     bottomHalf.appendChild(document.createElement('span')).innerHTML =
-        'Index content bottom half';
+        'About content bottom half';
     
     document.getElementById('main').appendChild(bottomHalf);
 
     const link = document.createElement('a');
-    link.setAttribute('href', './about.html');
-    link.innerHTML = 'about';
+    link.setAttribute('href', './');
+    link.innerHTML = 'home';
     document.getElementById('footer').appendChild(link);
 }
 
