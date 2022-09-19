@@ -27,8 +27,12 @@ const renderView = () => {
     link.innerHTML = 'about';
     document.getElementById('footer').appendChild(link);
 
-    document.getElementById('body').style.height = window.innerHeight;
-
 }
 
 renderView();
+
+const setDocumentHeight = () => {
+    document.documentElement.style.setProperty('--doc-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', setDocumentHeight);
+setDocumentHeight();

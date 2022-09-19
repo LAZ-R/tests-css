@@ -47,6 +47,8 @@ GLOBAL VARIABLES
         Sizes
     ----------*/
 
+    --doc-height: 100%;
+
     /* header height */
     --phone-header-height: 10vh;
     --tablet-header-height: 10vh;
@@ -84,26 +86,12 @@ GLOBAL VARIABLES
 MAIN CONTAINERS
 ========================== */
 
-html {
-    box-sizing: border-box;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: magenta;
-}
-
+html,
 body {
-    box-sizing: border-box;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: cyan;
+ padding: 0;
+ margin: 0;
+ height: 100vh; /* fallback for Js load */
+ height: var(--doc-height);
 }
 
 /* header */
