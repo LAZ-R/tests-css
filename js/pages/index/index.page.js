@@ -1,4 +1,5 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
+import * as HEADER from '../../components/header/header.component.js'
 
 const pageTitle = 'Test CSS';
 
@@ -7,10 +8,14 @@ const renderView = () => {
     SERVICE_PWA.setHTMLTitle(pageTitle);
     
     const page = document.createElement('div');
-    page.setAttribute('id', 'indexPage');
+    page.setAttribute('id', 'indexSection1');
     page.setAttribute('class', 'page-section section1');
 
-    for (let n = 0; n < 25; n++) {
+    const textInput = document.createElement('input');
+    textInput.setAttribute('type', 'text');
+    page.appendChild(textInput);
+    
+    for (let n = 1; n <= 25; n++) {
         page.appendChild(document.createElement('p')).innerHTML =
             `placeholder n°${n}`;
     }       
@@ -18,10 +23,10 @@ const renderView = () => {
     document.getElementById('main').appendChild(page);
 
     const page2 = document.createElement('div');
-    page2.setAttribute('id', 'indexPage2');
+    page2.setAttribute('id', 'indexSection2');
     page2.setAttribute('class', 'page-section section2');
 
-    for (let n = 0; n < 25; n++) {
+    for (let n = 1; n <= 25; n++) {
         page2.appendChild(document.createElement('p')).innerHTML =
             `placeholder n°${n}`;
     }      
@@ -34,11 +39,6 @@ const renderView = () => {
     document.getElementById('footer').appendChild(link);
 
 }
-
+HEADER.renderView();
 renderView();
-
-const setDocumentHeight = () => {
-    document.documentElement.style.setProperty('--doc-height', `${window.innerHeight}px`)
-}
-window.addEventListener('resize', setDocumentHeight);
-setDocumentHeight();
+SERVICE_PWA.setViewportSize();

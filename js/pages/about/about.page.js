@@ -1,4 +1,5 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
+import * as HEADER from '../../components/header/header.component.js'
 
 const pageTitle = 'Test CSS';
 
@@ -27,5 +28,5 @@ const renderView = () => {
     link.innerHTML = 'home';
     document.getElementById('footer').appendChild(link);
 }
-
+HEADER.renderView();
 renderView();

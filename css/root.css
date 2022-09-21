@@ -11,7 +11,7 @@ GLOBAL VARIABLES
 
     /* Primary */
     --primary: #b12b2b;
-    --primary-hover: #409284;
+    --primary-hover: #c53939;
 
     /* Secondary */
     --secondary: #e4b8e4;
@@ -92,36 +92,22 @@ body {
  margin: 0;
  height: 100vh; /* fallback for Js load */
  height: var(--doc-height);
+ background-color: var(--html-background-color);
 }
 
-/* header */
-header {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20%;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: orange;
-}
-
-/* Main container */
 main {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 70%;
+    height: 80%;
     min-width: 100%;
     margin: 0;
     padding: 0;
     background-color: yellow;
 }
 
-/* footer */
 footer {
     box-sizing: border-box;
     display: flex;
@@ -131,5 +117,5 @@ footer {
     min-width: 100%;
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-color: var(--primary);
 }
