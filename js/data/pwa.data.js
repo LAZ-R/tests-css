@@ -1,2 +1,2 @@
-export const VERSION_NUMBER = '0.0.6';
-// v 0.0.6 : setDocumentHeight
+export const VERSION_NUMBER = '0.0.7';
+// v 0.0.7 : accueil sections scroll y

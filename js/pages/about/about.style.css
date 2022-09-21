@@ -1,6 +1,6 @@
 @import url("../../../css/root.css");
 
-/* Put here any 'index.html' specific css */
+/* Put here any 'about.html' specific css */
 
 .fiftyPercent {
     box-sizing: border-box;
@@ -13,9 +13,9 @@
 }
 
 .topHalf {
-    background-color: pink;
+    background-color: blue;
 }
 
 .bottomHalf {
-    background-color: green;
+    background-color: lavender;
 }

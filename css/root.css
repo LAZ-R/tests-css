@@ -10,7 +10,7 @@ GLOBAL VARIABLES
     ----------*/
 
     /* Primary */
-    --primary: #468076;
+    --primary: #b12b2b;
     --primary-hover: #409284;
 
     /* Secondary */
@@ -112,7 +112,7 @@ main {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 70%;
     min-width: 100%;

@@ -6,25 +6,31 @@ const renderView = () => {
 
     SERVICE_PWA.setHTMLTitle(pageTitle);
     
-    const topHalf = document.createElement('div');
-    topHalf.setAttribute('id', 'topHalf');
-    topHalf.setAttribute('class', 'fiftyPercent topHalf');
-    topHalf.appendChild(document.createElement('span')).innerHTML =
-        'Index content top half v' + SERVICE_PWA.getAppVersionNumber();
-    
-    document.getElementById('main').appendChild(topHalf);
+    const page = document.createElement('div');
+    page.setAttribute('id', 'indexPage');
+    page.setAttribute('class', 'page-section section1');
 
-    const bottomHalf = document.createElement('div');
-    bottomHalf.setAttribute('id', 'bottomHalf');
-    bottomHalf.setAttribute('class', 'fiftyPercent bottomHalf');
-    bottomHalf.appendChild(document.createElement('span')).innerHTML =
-        'Index content bottom half v' + SERVICE_PWA.getAppVersionNumber();
+    for (let n = 0; n < 25; n++) {
+        page.appendChild(document.createElement('p')).innerHTML =
+            `placeholder n°${n}`;
+    }       
     
-    document.getElementById('main').appendChild(bottomHalf);
+    document.getElementById('main').appendChild(page);
+
+    const page2 = document.createElement('div');
+    page2.setAttribute('id', 'indexPage2');
+    page2.setAttribute('class', 'page-section section2');
+
+    for (let n = 0; n < 25; n++) {
+        page2.appendChild(document.createElement('p')).innerHTML =
+            `placeholder n°${n}`;
+    }      
+    
+    document.getElementById('main').appendChild(page2);
 
     const link = document.createElement('a');
     link.setAttribute('href', './about.html');
-    link.innerHTML = 'about';
+    link.innerHTML = `about v${SERVICE_PWA.getAppVersionNumber()}`;
     document.getElementById('footer').appendChild(link);
 
 }
