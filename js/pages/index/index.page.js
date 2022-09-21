@@ -1,5 +1,6 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
 import * as HEADER from '../../components/header/header.component.js'
+import * as FOOTER from '../../components/footer/footer.component.js'
 
 const pageTitle = 'Test CSS';
 
@@ -14,7 +15,7 @@ const renderView = () => {
     const textInput = document.createElement('input');
     textInput.setAttribute('type', 'text');
     page.appendChild(textInput);
-    
+
     for (let n = 1; n <= 25; n++) {
         page.appendChild(document.createElement('p')).innerHTML =
             `placeholder n°${n}`;
@@ -32,13 +33,8 @@ const renderView = () => {
     }      
     
     document.getElementById('main').appendChild(page2);
-
-    const link = document.createElement('a');
-    link.setAttribute('href', './about.html');
-    link.innerHTML = `about v${SERVICE_PWA.getAppVersionNumber()}`;
-    document.getElementById('footer').appendChild(link);
-
 }
 HEADER.renderView();
 renderView();
+FOOTER.renderView();
 SERVICE_PWA.setViewportSize();

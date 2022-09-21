@@ -1,5 +1,6 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
 import * as HEADER from '../../components/header/header.component.js'
+import * as FOOTER from '../../components/footer/footer.component.js'
 
 const pageTitle = 'Test CSS';
 
@@ -11,7 +12,9 @@ const renderView = () => {
     topHalf.setAttribute('id', 'topHalf');
     topHalf.setAttribute('class', 'fiftyPercent topHalf');
     topHalf.appendChild(document.createElement('span')).innerHTML =
-        'About content top half v' + SERVICE_PWA.getAppVersionNumber();
+    `About content<br>
+    top half<br>
+    v${SERVICE_PWA.getAppVersionNumber()}`;
     
     document.getElementById('main').appendChild(topHalf);
 
@@ -19,14 +22,12 @@ const renderView = () => {
     bottomHalf.setAttribute('id', 'bottomHalf');
     bottomHalf.setAttribute('class', 'fiftyPercent bottomHalf');
     bottomHalf.appendChild(document.createElement('span')).innerHTML =
-        'About content bottom half v' + SERVICE_PWA.getAppVersionNumber();
+        `About content<br>
+        bottom half<br>
+        v${SERVICE_PWA.getAppVersionNumber()}`;
     
     document.getElementById('main').appendChild(bottomHalf);
-
-    const link = document.createElement('a');
-    link.setAttribute('href', './');
-    link.innerHTML = 'home';
-    document.getElementById('footer').appendChild(link);
 }
 HEADER.renderView();
 renderView();
+FOOTER.renderView();

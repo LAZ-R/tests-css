@@ -49,19 +49,27 @@ GLOBAL VARIABLES
 
     --doc-height: 100%;
 
+    /* main height */
+    --phone-main-height: 85%;
+    --tablet-main-height: 85%;
+    --desktop-main-height: 85%;
+    --widescreen-main-height: 85%;
+
+    --main-height: var(--phone-main-height);
+
     /* header height */
-    --phone-header-height: 10vh;
-    --tablet-header-height: 10vh;
-    --desktop-header-height: 10vh;
-    --widescreen-header-height: 10vh;
+    --phone-header-height: 10%;
+    --tablet-header-height: 10%;
+    --desktop-header-height: 10%;
+    --widescreen-header-height: 10%;
 
     --header-height: var(--phone-header-height);
 
     /* footer height */
-    --phone-footer-height: 10vh;
-    --tablet-footer-height: 10vh;
-    --desktop-footer-height: 10vh;
-    --widescreen-footer-height: 10vh;
+    --phone-footer-height: 5%;
+    --tablet-footer-height: 5%;
+    --desktop-footer-height: 5%;
+    --widescreen-footer-height: 5%;
 
     --footer-height: var(--phone-footer-height);
 
@@ -93,6 +101,7 @@ body {
  height: 100vh; /* fallback for Js load */
  height: var(--doc-height);
  background-color: var(--html-background-color);
+ font-family: 'Roboto-Regular';
 }
 
 main {
@@ -101,21 +110,8 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 80%;
+    height: var(--main-height);
     min-width: 100%;
     margin: 0;
     padding: 0;
-    background-color: yellow;
-}
-
-footer {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary);
 }

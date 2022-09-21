@@ -17,10 +17,10 @@
 
 .section1 {
     height: 70%;
-    background-color: aqua;
+    background-color: var(--gray-20);
 }
 
 .section2 {
     height: 30%;
-    background-color: magenta;
+    background-color: var(--gray-10);
 }

@@ -10,12 +10,14 @@
     align-items: center;
     height: 50%;
     min-width: 100%;
+    text-align: center;
 }
 
 .topHalf {
-    background-color: blue;
+    background-color: var(--gray-70);
+    color: white;
 }
 
 .bottomHalf {
-    background-color: lavender;
+    background-color: var(--gray-30);
 }
