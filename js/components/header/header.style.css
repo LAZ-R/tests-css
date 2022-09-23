@@ -41,38 +41,17 @@ header {
     align-items: center;
     height: fit-content;
     padding: 5% 10% 5% 10%;
-    color: white;
-    border-bottom: 1px solid white;
+    color: var(--font-color-default);
+    border-bottom: 1px solid var(--font-color-default);
 }
 .header-link:hover {
     text-decoration: none;
-    background-color: var(--secondary-hover);
+    background-color: var(--gray-20);
 }
 .header-link:focus {
-    background-color: var(--secondary-hover);
+    background-color: var(--gray-20);
 }
 
-.header-burger-menu-button {
-    padding: 0;
-    background-color: #ffffff00;
-    color: white;
-    font-size: 28px;
-}
-.header-burger-menu-button:hover {
-    background-color: #ffffff00;
-}
-
-.header-burger-menu {
-    box-sizing: border-box;
-    position: fixed;
-    top: var(--header-height);
-    right: -50%;
-    height: calc(100% - calc(var(--header-height) + var(--footer-height)));
-    width: 50%;
-    background-color: var(--secondary);
-    transition: right .2s ease-in-out;
-    overflow-y: scroll;
-}
 /* ==========================
 MEDIA QUERIES
 ========================== */
@@ -95,6 +74,7 @@ MEDIA QUERIES
         height: 100%;
         padding: 0 10% 0 10%;
         border-bottom: none;
+        color: white;
     }
         .header-link:hover {
             background-color: var(--primary-hover);
@@ -112,6 +92,7 @@ MEDIA QUERIES
         height: 100%;
         padding: 0 10% 0 10%;
         border-bottom: none;
+        color: white;
     }
         .header-link:hover {
             background-color: var(--primary-hover);

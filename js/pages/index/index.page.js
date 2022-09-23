@@ -7,6 +7,8 @@ const pageTitle = 'Test CSS';
 const renderView = () => {
 
     SERVICE_PWA.setHTMLTitle(pageTitle);
+
+    /* --------------------------------------------------------------------- */
     
     const page = document.createElement('div');
     page.setAttribute('id', 'indexSection1');
@@ -19,16 +21,33 @@ const renderView = () => {
     
     document.getElementById('main').appendChild(page);
 
+    /* --------------------------------------------------------------------- */
+
     const page2 = document.createElement('div');
     page2.setAttribute('id', 'indexSection2');
     page2.setAttribute('class', 'page-section section2');
 
+    for (let n = 1; n <= 4; n++) {
+        const tile = document.createElement('div');
+        tile.setAttribute('class', 'index-tile');
+        tile.innerHTML =
+            `<span>placeholder n°${n}</span>`;
+        page2.appendChild(tile)
+    }
+    document.getElementById('main').appendChild(page2);
+
+    /* --------------------------------------------------------------------- */
+
+    const page3 = document.createElement('div');
+    page3.setAttribute('id', 'indexSection2');
+    page3.setAttribute('class', 'page-section section3');
+
     for (let n = 1; n <= 25; n++) {
-        page2.appendChild(document.createElement('p')).innerHTML =
+        page3.appendChild(document.createElement('p')).innerHTML =
             `placeholder n°${n}`;
     }      
     
-    document.getElementById('main').appendChild(page2);
+    document.getElementById('main').appendChild(page3);
     
 }
 HEADER.renderView();

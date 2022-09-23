@@ -1,5 +1,5 @@
-export const VERSION_NUMBER = '0.0.10';
-// v 0.0.10 : passage en mode 'template' + création menu burger + anim slide
+export const VERSION_NUMBER = '0.0.11';
+// v 0.0.11 : slider sur index + burger menu en component + burger menu background
 
 export const MAX_SCREEN_SIZE = {
     Phone: 767,

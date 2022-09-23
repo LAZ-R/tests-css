@@ -1,4 +1,5 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
+import * as COMP_BURGER from '../burgerMenu/burgerMenu.component.js';
 
 let isMenuVisible = false;
 
@@ -28,29 +29,6 @@ export const renderView = () => {
 
         header.appendChild(headerLinksGroup);
     } else {
-        const headerBurgerMenuButton = document.createElement('button');
-        headerBurgerMenuButton.setAttribute('id', 'headerBurgerMenuButton');
-        headerBurgerMenuButton.setAttribute('class', 'header-burger-menu-button');
-        headerBurgerMenuButton.innerHTML =
-            '☰'
-        headerBurgerMenuButton.addEventListener('click', () => {
-            if (isMenuVisible) {
-                document.getElementById('headerBurgerMenuButton').innerHTML = '☰';
-                document.getElementById('headerBurgerMenu').style.right = '-50%';
-                isMenuVisible = false;
-            } else {
-                document.getElementById('headerBurgerMenuButton').innerHTML = '☒';
-                document.getElementById('headerBurgerMenu').style.right = 0;
-                isMenuVisible = true;
-            }
-        });
-
-        header.appendChild(headerBurgerMenuButton);
-        const headerBurgerMenu = document.createElement('div');
-        headerBurgerMenu.setAttribute('id', 'headerBurgerMenu');
-        headerBurgerMenu.setAttribute('class', 'header-burger-menu');
-        headerBurgerMenu.innerHTML = SERVICE_PWA.getAppMenuLinks();
-
-        document.getElementById('body').appendChild(headerBurgerMenu);
+        COMP_BURGER.renderView();
     }
 }
