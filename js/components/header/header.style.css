@@ -15,13 +15,105 @@ header {
 }
 
 .header-index-link {
-    height: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .header-logo {
     height: 150%;
+}
+
+.header-links-group {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.header-link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    padding: 5% 10% 5% 10%;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.header-link:hover {
+    text-decoration: none;
+    background-color: var(--secondary-hover);
+}
+.header-link:focus {
+    background-color: var(--secondary-hover);
+}
+
+.header-burger-menu-button {
+    padding: 0;
+    background-color: #ffffff00;
+    color: white;
+    font-size: 28px;
+}
+.header-burger-menu-button:hover {
+    background-color: #ffffff00;
+}
+
+.header-burger-menu {
+    box-sizing: border-box;
+    position: fixed;
+    top: var(--header-height);
+    right: -50%;
+    height: calc(100% - calc(var(--header-height) + var(--footer-height)));
+    width: 50%;
+    background-color: var(--secondary);
+    transition: right .2s ease-in-out;
+    overflow-y: scroll;
+}
+/* ==========================
+MEDIA QUERIES
+========================== */
+
+/* Tablets ----------- */
+@media (min-width : 767px) and (max-width : 1279px) {
+    :root {
+        --header-height: var(--tablet-header-height);
+    }
+}
+
+/* Laptops ----------- */
+@media (min-width: 1279px) and (max-width: 1919px) {
+    :root {
+        --header-height: var(--laptop-header-height);
+    }
+    .header-link {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 0 10% 0 10%;
+        border-bottom: none;
+    }
+        .header-link:hover {
+            background-color: var(--primary-hover);
+        }
+}
+
+/* Desktops ----------- */
+@media (min-width: 1920px) {
+    :root {
+        --header-height: var(--desktop-header-height);
+    }
+    .header-link {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 0 10% 0 10%;
+        border-bottom: none;
+    }
+        .header-link:hover {
+            background-color: var(--primary-hover);
+        }
 }

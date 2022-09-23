@@ -12,10 +12,6 @@ const renderView = () => {
     page.setAttribute('id', 'indexSection1');
     page.setAttribute('class', 'page-section section1');
 
-    const textInput = document.createElement('input');
-    textInput.setAttribute('type', 'text');
-    page.appendChild(textInput);
-
     for (let n = 1; n <= 25; n++) {
         page.appendChild(document.createElement('p')).innerHTML =
             `placeholder n°${n}`;
@@ -33,6 +29,7 @@ const renderView = () => {
     }      
     
     document.getElementById('main').appendChild(page2);
+    
 }
 HEADER.renderView();
 renderView();

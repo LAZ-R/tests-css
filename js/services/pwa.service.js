@@ -1,4 +1,4 @@
-import { VERSION_NUMBER } from "../data/pwa.data.js";
+import { VERSION_NUMBER, MAX_SCREEN_SIZE, MENU_LINKS } from "../data/pwa.data.js";
 
 export const setViewportSize = () => {
   const setDocumentHeight = () => {
@@ -19,3 +19,14 @@ export const setHTMLTitle = (pageTitle) => {
 export const getAppVersionNumber = () => {
   return VERSION_NUMBER;
 }
+
+export const getAppMenuLinks = () => {
+  return MENU_LINKS;
+}
+
+export const isPhone = window.innerWidth <= MAX_SCREEN_SIZE.Phone
+export const isTablet = window.innerWidth > MAX_SCREEN_SIZE.Phone && window.innerWidth <= MAX_SCREEN_SIZE.Tablet
+export const isTabletOrUp = window.innerWidth > MAX_SCREEN_SIZE.Phone
+export const isLaptop = window.innerWidth > MAX_SCREEN_SIZE.Tablet && window.innerWidth <= MAX_SCREEN_SIZE.Laptop
+export const isLaptopOrUp = window.innerWidth > MAX_SCREEN_SIZE.Tablet
+export const isDesktop = window.innerWidth > MAX_SCREEN_SIZE.Laptop
