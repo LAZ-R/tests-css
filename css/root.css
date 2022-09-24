@@ -9,14 +9,6 @@ GLOBAL VARIABLES
         Colors
     ----------*/
 
-    /* Primary */
-    --primary: #527c6c;
-    --primary-hover: #5b8a78;
-
-    /* Secondary */
-    --secondary: #446659;
-    --secondary-hover: #4b7062;
-
     /* Gray */
     --gray-90: #191919;
     --gray-80: #333333;
@@ -27,6 +19,17 @@ GLOBAL VARIABLES
     --gray-30: #b3b3b3;
     --gray-20: #cccccc;
     --gray-10: #e6e6e6;
+
+    /* Primary */
+    --primary: #527c6c;
+    --primary-hover: #5b8a78;
+
+    /* Secondary */
+    --secondary: #446659;
+    --secondary-hover: #4b7062;
+
+    /* Special */
+    --lazr-red: #b85858;
     
     /* Font colors */
     --font-color-default: var(--gray-70);
