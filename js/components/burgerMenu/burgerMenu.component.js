@@ -35,7 +35,10 @@ export const renderView = () => {
     const burgerMenu = document.createElement('div');
     burgerMenu.setAttribute('id', 'burgerMenu');
     burgerMenu.setAttribute('class', 'burger-menu');
-    burgerMenu.innerHTML = SERVICE_PWA.getAppMenuLinks();
+    burgerMenu.innerHTML = `
+    <a href="./" class="burger-menu-link">Home</a>
+    <a href="./about.html" class="burger-menu-link">About</a>
+    `;
 
     document.getElementById('body').appendChild(burgerMenu);
 }
@@ -43,7 +46,7 @@ export const renderView = () => {
 export const closeMenu = () => {
     document.getElementById('burgerMenuBackground').style.opacity = '0%';
     document.getElementById('headerBurgerMenuButton').innerHTML = '☰';
-    document.getElementById('burgerMenu').style.right = '-60%';
+    SERVICE_PWA.isTablet ? document.getElementById('burgerMenu').style.right = '-40%' : document.getElementById('burgerMenu').style.right = '-60%';
     setTimeout(() => {
         document.getElementById('burgerMenuBackground').style.display = 'none';
     }, 200);

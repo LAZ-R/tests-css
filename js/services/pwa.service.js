@@ -1,4 +1,4 @@
-import { VERSION_NUMBER, MAX_SCREEN_SIZE, MENU_LINKS } from "../data/pwa.data.js";
+import { VERSION_NUMBER, MAX_SCREEN_SIZE } from "../data/pwa.data.js";
 
 export const setViewportSize = () => {
   const setDocumentHeight = () => {
@@ -20,10 +20,7 @@ export const getAppVersionNumber = () => {
   return VERSION_NUMBER;
 }
 
-export const getAppMenuLinks = () => {
-  return MENU_LINKS;
-}
-
+/* Breakpoints */
 export const isPhone = window.innerWidth <= MAX_SCREEN_SIZE.Phone
 export const isTablet = window.innerWidth > MAX_SCREEN_SIZE.Phone && window.innerWidth <= MAX_SCREEN_SIZE.Tablet
 export const isTabletOrUp = window.innerWidth > MAX_SCREEN_SIZE.Phone

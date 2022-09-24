@@ -6,7 +6,7 @@
     padding: 0;
     background-color: #ffffff00;
     color: white;
-    font-size: 28px;
+    font-size: 32px;
 }
 .header-burger-menu-button:hover {
     background-color: #ffffff00;
@@ -36,13 +36,42 @@
     transition: right .2s ease-in-out;
     overflow-y: scroll;
 }
+
+.burger-menu-link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    padding: 5% 10% 5% 10%;
+    color: var(--font-color-default);
+    border-bottom: 1px solid var(--font-color-default);    
+    font-size: 16px;
+}
+.burger-menu-link:hover {
+    text-decoration: none;
+    background-color: var(--gray-20);
+}
+.burger-menu-link:focus {
+    background-color: var(--gray-20);
+}
+
 /* ==========================
 MEDIA QUERIES
 ========================== */
 
 /* Tablets ----------- */
 @media (min-width : 767px) and (max-width : 1279px) {
-    
+    .header-burger-menu-button {
+        font-size: 48px;
+    }
+    .burger-menu {
+        right: -40%;
+        width: 40%;
+    }
+    .burger-menu-link { 
+        font-size: 24px;
+    }
 }
 
 /* Laptops ----------- */

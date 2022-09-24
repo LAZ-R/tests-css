@@ -1,8 +1,6 @@
 import * as SERVICE_PWA from '../../services/pwa.service.js';
 import * as COMP_BURGER from '../burgerMenu/burgerMenu.component.js';
 
-let isMenuVisible = false;
-
 export const renderView = () => {
     const header = document.getElementById('header');
 
@@ -21,14 +19,17 @@ export const renderView = () => {
     headerIndexLink.appendChild(headerLogo);
     header.appendChild(headerIndexLink);
 
-    if (SERVICE_PWA.isLaptopOrUp) {
+    if (SERVICE_PWA.isPhone || SERVICE_PWA.isTablet) {
+        COMP_BURGER.renderView();
+    } else {
         const headerLinksGroup = document.createElement('div');
         headerLinksGroup.setAttribute('id', 'headerLinksGroup');
         headerLinksGroup.setAttribute('class', 'header-links-group');
-        headerLinksGroup.innerHTML = SERVICE_PWA.getAppMenuLinks();
+        headerLinksGroup.innerHTML = `
+        <a href="./" class="header-link">Home</a>
+        <a href="./about.html" class="header-link">About</a>
+        `;
 
         header.appendChild(headerLinksGroup);
-    } else {
-        COMP_BURGER.renderView();
     }
 }
