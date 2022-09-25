@@ -4,5 +4,5 @@ export const MAX_SCREEN_SIZE = {
     Laptop: 1919
 }
 
-export const VERSION_NUMBER = '0.0.15';
-// v 0.0.15 : footer component
+export const VERSION_NUMBER = '0.0.16';
+// v 0.0.16 : sw pwa version + fix header logo + + utils roundTo + about page css + color rebrand + icon + favicon
