@@ -51,4 +51,6 @@ const renderView = () => {
 }
 HEADER.renderView();
 renderView();
-FOOTER.renderView();
+if (SERVICE_PWA.isLaptopOrUp) {
+    FOOTER.renderView();
+}
