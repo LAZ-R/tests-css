@@ -5,7 +5,7 @@
 .header-burger-menu-button {
     padding: 0;
     background-color: #ffffff00;
-    color: white;
+    color: var(--on-primary);
     font-size: 32px;
 }
 .header-burger-menu-button:hover {
@@ -28,12 +28,26 @@
 .burger-menu {
     box-sizing: border-box;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     top: var(--header-height);
     right: -60%;
     height: calc(100% - calc(var(--header-height) + var(--footer-height)));
     width: 60%;
-    background-color: white;
+    background-color: var(--html-background-color);
     transition: right .2s ease-in-out;
+}
+
+.burger-menu-links {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -43,6 +57,7 @@
     justify-content: flex-start;
     align-items: center;
     height: fit-content;
+    width: 100%;
     padding: 5% 10% 5% 10%;
     color: var(--font-color-default);
     border-bottom: 1px solid var(--font-color-default);    
@@ -54,6 +69,25 @@
 }
 .burger-menu-link:focus {
     background-color: var(--gray-20);
+}
+
+.burger-menu-about {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 5% 10% 5% 10%;
+    box-shadow: #00000011 0 -15px 20px;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    font-size: 12px;
+}
+
+.burger-menu-about > span:first-child {
+    font-size: 18px;
 }
 
 /* ==========================
@@ -75,7 +109,7 @@ MEDIA QUERIES
 }
 
 /* Laptops ----------- */
-@media (min-width: 1279px) and (max-width: 1919px) {
+@media (min-width: 1280px) and (max-width: 1919px) {
     
 }
 

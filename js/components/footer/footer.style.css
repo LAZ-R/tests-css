@@ -12,12 +12,12 @@ footer {
     margin: 0;
     padding: 0 var(--horizontal-padding) 0 var(--horizontal-padding);
     background-color: var(--primary);
-    color: white;
+    color: var(--font-color-footer);
 }
 
 
 footer > a {
-    color: white;
+    color: var(--font-color-footer);
     padding-left: 4px;
 }
 /* ==========================
@@ -32,7 +32,7 @@ MEDIA QUERIES
 }
 
 /* Laptops ----------- */
-@media (min-width: 1279px) and (max-width: 1919px) {
+@media (min-width: 1280px) and (max-width: 1919px) {
     :root {
         --footer-height: var(--laptop-footer-height);
     }

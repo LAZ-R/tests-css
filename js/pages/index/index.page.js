@@ -14,43 +14,17 @@ const renderView = () => {
     page.setAttribute('id', 'indexSection1');
     page.setAttribute('class', 'page-section section1');
 
-    for (let n = 1; n <= 25; n++) {
+    for (let n = 0; n < 24; n++) {
         page.appendChild(document.createElement('p')).innerHTML =
-            `placeholder n°${n}`;
+            `placeholder n°${n + 1}`;
     }       
     
     document.getElementById('main').appendChild(page);
-
-    /* --------------------------------------------------------------------- */
-
-    const page2 = document.createElement('div');
-    page2.setAttribute('id', 'indexSection2');
-    page2.setAttribute('class', 'page-section section2');
-
-    for (let n = 1; n <= 4; n++) {
-        const tile = document.createElement('div');
-        tile.setAttribute('class', 'index-tile');
-        tile.innerHTML =
-            `<span>placeholder n°${n}</span>`;
-        page2.appendChild(tile)
-    }
-    document.getElementById('main').appendChild(page2);
-
-    /* --------------------------------------------------------------------- */
-
-    const page3 = document.createElement('div');
-    page3.setAttribute('id', 'indexSection2');
-    page3.setAttribute('class', 'page-section section3');
-
-    for (let n = 1; n <= 25; n++) {
-        page3.appendChild(document.createElement('p')).innerHTML =
-            `placeholder n°${n}`;
-    }      
-    
-    document.getElementById('main').appendChild(page3);
     
 }
 HEADER.renderView();
 renderView();
-FOOTER.renderView();
+if (SERVICE_PWA.isLaptopOrUp) {
+    FOOTER.renderView();
+}
 SERVICE_PWA.setViewportSize();

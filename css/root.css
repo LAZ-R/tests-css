@@ -22,41 +22,34 @@ GLOBAL VARIABLES
 
     /* Primary */
     --primary: #007acc;
-    --primary-hover: #1b699c;
+    --primary-hover: #0071bd;
 
-    /* Secondary */
-    --secondary: #446659;
-    --secondary-hover: #4b7062;
+    --on-primary : white;
 
-    /* Special */
+    /* Accent */
+    --accent: #a441bd;
+    --accent-hover: #973dad;
+
+    /* Constant colors */
     --lazr-red: #b85858;
+    --html-background-color: white;
     
     /* Font colors */
     --font-color-default: var(--gray-70);
+
     --font-color-links: var(--gray-70);
 
-    --font-color-header: #ffffff;
-    --font-color-header-hover: var(--gray-10);
-    --font-color-header-click: var(--gray-20);
+    --font-color-header: var(--on-primary);
+    --font-color-header-hover: var(--on-primary);
+    --font-color-header-focus: var(--on-primary);
 
-    --font-color-footer: var(--gray-70);
-
-    /* Constant colors */
-    --html-background-color: #ffffff;
+    --font-color-footer: var(--on-primary);
 
     /*----------
         Sizes
     ----------*/
 
     --doc-height: 100%;
-
-    /* main height */
-    --phone-main-height: 85%;
-    --tablet-main-height: 85%;
-    --laptop-main-height: 89%;
-    --desktop-main-height: 89%;
-
-    --main-height: var(--phone-main-height);
 
     /* header height */
     --phone-header-height: 10%;
@@ -65,10 +58,18 @@ GLOBAL VARIABLES
     --desktop-header-height: 7%;
 
     --header-height: var(--phone-header-height);
+    
+    /* main height */
+    --phone-main-height: 90%;
+    --tablet-main-height: 90%;
+    --laptop-main-height: 89%;
+    --desktop-main-height: 89%;
+
+    --main-height: var(--phone-main-height);
 
     /* footer height */
-    --phone-footer-height: 5%;
-    --tablet-footer-height: 5%;
+    --phone-footer-height: 0%;
+    --tablet-footer-height: 0%;
     --laptop-footer-height: 4%;
     --desktop-footer-height: 4%;
 
@@ -139,6 +140,7 @@ a {
 
 /* Buttons */
 button {
+    -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
     font-family: Roboto-Medium;
     border: none;
@@ -161,11 +163,21 @@ button {
 
 .primary-button {
     background-color: var(--primary);
-    color: #ffffff;
+    color: var(--on-primary);
 }
 
     .primary-button:hover {
         background-color: var(--primary-hover);
+    }
+
+.secondary-button {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+    .secondary-button:hover {
+        border: 1px solid var(--primary-hover);
+        color: var(--primary-hover);
     }
 
 /* ==========================
@@ -181,7 +193,7 @@ MEDIA QUERIES
 }
 
 /* Laptops ----------- */
-@media (min-width: 1279px) and (max-width: 1919px) {
+@media (min-width: 1280px) and (max-width: 1919px) {
     :root {
         --horizontal-padding : var(--laptop-horizontal-padding);
         --main-height: var(--laptop-main-height);

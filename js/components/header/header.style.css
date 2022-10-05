@@ -12,6 +12,7 @@ header {
     margin: 0;
     padding: 0 var(--horizontal-padding) 0 var(--horizontal-padding);
     background-color: var(--primary);
+    color: var(--font-color-header);
 }
 
 .header-index-link {
@@ -26,32 +27,6 @@ header {
     height: 65%;
 }
 
-.header-links-group {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-}
-
-.header-link {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: fit-content;
-    padding: 5% 10% 5% 10%;
-    color: var(--font-color-default);
-    border-bottom: 1px solid var(--font-color-default);
-}
-.header-link:hover {
-    text-decoration: none;
-    background-color: var(--gray-20);
-}
-.header-link:focus {
-    background-color: var(--gray-20);
-}
-
 /* ==========================
 MEDIA QUERIES
 ========================== */
@@ -63,20 +38,34 @@ MEDIA QUERIES
     }
 }
 
-/* Laptops ----------- */
-@media (min-width: 1279px) and (max-width: 1919px) {
+/* Laptops and up ----------- */
+@media (min-width: 1280px) {
     :root {
         --header-height: var(--laptop-header-height);
     }
+    .header-links-group {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+    }
     .header-link {
+        box-sizing: border-box;
+        display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         padding: 0 10% 0 10%;
         border-bottom: none;
-        color: white;
+        color: var(--font-color-header);
     }
         .header-link:hover {
+            text-decoration: none;
+            background-color: var(--primary-hover);
+        }
+        .header-link:focus {
+            text-decoration: none;
             background-color: var(--primary-hover);
         }
 }
@@ -86,15 +75,4 @@ MEDIA QUERIES
     :root {
         --header-height: var(--desktop-header-height);
     }
-    .header-link {
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 0 10% 0 10%;
-        border-bottom: none;
-        color: white;
-    }
-        .header-link:hover {
-            background-color: var(--primary-hover);
-        }
 }

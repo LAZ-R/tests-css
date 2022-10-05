@@ -36,8 +36,14 @@ export const renderView = () => {
     burgerMenu.setAttribute('id', 'burgerMenu');
     burgerMenu.setAttribute('class', 'burger-menu');
     burgerMenu.innerHTML = `
-    <a href="./" class="burger-menu-link">Home</a>
-    <a href="./about.html" class="burger-menu-link">About</a>
+        <div class="burger-menu-links">
+            <a href="./" class="burger-menu-link">Home</a>
+            <a href="./about.html" class="burger-menu-link">About</a>
+        </div>
+        <div class="burger-menu-about">
+            <span>v${SERVICE_PWA.getAppVersionNumber()}</span>
+            <span>&copy; ${new Date().getFullYear()} • laz_R</span>
+        </div>
     `;
 
     document.getElementById('body').appendChild(burgerMenu);
