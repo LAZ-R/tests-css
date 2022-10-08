@@ -1,4 +1,4 @@
-var cacheName = 'ES6-PWA';
+var cacheName = 'LAZR-TEMPLATE';
 var filesToCache = [
   './',
   './index.html',
@@ -25,4 +25,4 @@ self.addEventListener('fetch', function(e) {
   );
 });
 
-const version = '0.0.17';
+const version = '0.0.18';

@@ -4,5 +4,5 @@ export const MAX_SCREEN_SIZE = {
     Laptop: 1919
 }
 
-export const VERSION_NUMBER = '0.0.17';
-// v 0.0.17 : no mobile footer + burger menu refacto + colors in root refacto
+export const VERSION_NUMBER = '0.0.18';
+// v 0.0.18 : epic changes (refacto monstre pour fichier LAZR, layout, 1 seul fichier html)

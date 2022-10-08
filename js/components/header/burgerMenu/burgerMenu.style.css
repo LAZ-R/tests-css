@@ -1,4 +1,4 @@
-@import url("../../../css/root.css");
+@import url("../../../../css/variables.css");
 
 /* Put here any 'burgerMenu' specific css */
 
@@ -7,6 +7,7 @@
     background-color: #ffffff00;
     color: var(--on-primary);
     font-size: 32px;
+    border: none;;
 }
 .header-burger-menu-button:hover {
     background-color: #ffffff00;

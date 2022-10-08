@@ -1,4 +1,4 @@
-@import url("../../../css/root.css");
+@import url("../../../css/variables.css");
 
 /* Put here any 'about.html' specific css */
 
@@ -11,10 +11,16 @@
     align-items: center;
     min-width: 100%;
     text-align: center;
+    padding: 10px var(--horizontal-padding) 10px var(--horizontal-padding);
 }
 
+/* ---------------------------------------------------------------- */
+
 .top-part {
-    height: 50%;
+    min-height: fit-content;
+    max-height: 100%;
+    justify-content: flex-start;
+    overflow-y: hidden;
 }
 
 .about-sub-category {
@@ -29,63 +35,90 @@
 }
 
 .about-app-infos {
-    height: 100%;
+    min-height: fit-content;
+    max-height: 100%;
 }
 
 .about-app-name {
-    height: 30%;
-    font-size: 50px;
+    height: fit-content;
+    font-size: 40px;
     font-family: 'Roboto-Bold';
 }
 
 .about-app-version {
-    height: 20%;
-    font-size: 30px;
+    height: fit-content;
+    font-size: 25px;
     font-family: 'Roboto-Bold-Italic';
 }
 
-.about-credits {
-    height: 450%;
-    font-size: 16px;
+.about-credits-label {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+.about-credits {
+    min-height: 0%;
+    max-height: 100%;
+    font-size: 16px;
+    font-size: 100%;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
+
+.about-credit {
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------------------- */
+
 .middle-part {
-    height: 25%;
-    background-color: var(--lazr-red);
-    color: white;
+    min-height: fit-content;
+    max-height: fit-content;
+    background-color: var(--gray-80);
+    padding-top: 0;
 }
 
 .about-warning {
-    height: 30%;
+    height: fit-content;
     justify-content: flex-end;
-    font-size: 30px;
+    font-size: 130%;
     font-family: 'Roboto-Bold';
+    padding: 10px 0 10px 0;
+    color: var(--lazr-red);
 }
 
 .about-warning-text {
-    height: 70%;
+    height: fit-content;
     justify-content: flex-start;
-    font-size: 16px;
+    font-size: 90%;
     font-family: 'Roboto-Medium';
-    padding: 2% var(--horizontal-padding) 0 var(--horizontal-padding);
+    color: var(--gray-10);
 }
 
+/* ---------------------------------------------------------------- */
+
 .bottom-part {
-    height: 25%;
-    background-color: white;
+    min-height: 15%;
+    max-height: 25%;
+    background-color: #ffffff;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .lazr-card {
-    height: 40%;
+    height: 100%;
+    min-width: 30%;
     font-family: 'Roboto-Medium';
 }
 
 .lazr-logo {
-    width: 10%;
+    height: 50%;
 }
 
 .links-card {
-    height: 60%;
+    height: 100%;
+    min-width: 50%;
 }
 
 .about-link {
@@ -94,9 +127,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 40%;
-    height: 35%;
-    background-color: white;
+    width: 100%;
+    height: 30%;
+    background-color: #ffffff;
     box-shadow: #00000025 0 5px 20px;
 }
 

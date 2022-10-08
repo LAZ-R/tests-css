@@ -1,30 +1,37 @@
-import * as SERVICE_PWA from '../../services/pwa.service.js';
-import * as HEADER from '../../components/header/header.component.js'
-import * as FOOTER from '../../components/footer/footer.component.js'
+import * as LAZR from '../../lazR/lazR.js';
 
-const pageTitle = 'Test CSS';
+export const renderPage = () => {
 
-const renderView = () => {
-
-    SERVICE_PWA.setHTMLTitle(pageTitle);
+    const logHelloWorld = (number) => {
+        console.log(`Hello world n°${number}`);
+    }
+    window.logHelloWorld = logHelloWorld;
 
     /* --------------------------------------------------------------------- */
-    
-    const page = document.createElement('div');
-    page.setAttribute('id', 'indexSection1');
-    page.setAttribute('class', 'page-section section1');
+    const pageTitle = 'Test CSS';
+    LAZR.DOM.setHTMLTitle(pageTitle);
 
-    for (let n = 0; n < 24; n++) {
-        page.appendChild(document.createElement('p')).innerHTML =
-            `placeholder n°${n + 1}`;
-    }       
+    const page = LAZR.DOM.createElement('div', 'indexPage', 'page', `
+        <h1>${pageTitle}</h1>
+        <div style="display:flex;justify-content:space-between;width: 100%">
+            <button class="primary-button" onclick="logHelloWorld(1)">Hello World 1</button>
+            <button class="secondary-button" onclick="logHelloWorld(2)">Hello World 2</button>
+        </div>`);
+
+    for (let n = 0; n < 10; n++) {
+        page.appendChild(
+            LAZR.DOM.createElement('h2', '', '', `
+                Subtitle n°${n + 1}`));
+        page.appendChild(
+            LAZR.DOM.createElement('p', '', '', `
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac nulla nisl. Praesent nec venenatis leo.
+            Mauris imperdiet, enim a pulvinar pretium, neque ante varius nibh, non bibendum leo nisl in mi.
+            Ut imperdiet tellus elementum, laoreet est quis, sodales libero. Duis posuere ullamcorper lectus at eleifend.<br>
+            Cras convallis, velit nec viverra euismod, nunc turpis volutpat metus, ut scelerisque nunc libero ut est.
+            Phasellus ut odio semper, volutpat odio a, suscipit massa. Curabitur feugiat erat turpis, in placerat neque tristique a.`));
+    }
+    page.style.padding = '0px var(--horizontal-padding)';
+    /* --------------------------------------------------------------------- */
     
-    document.getElementById('main').appendChild(page);
-    
+    return page;
 }
-HEADER.renderView();
-renderView();
-if (SERVICE_PWA.isLaptopOrUp) {
-    FOOTER.renderView();
-}
-SERVICE_PWA.setViewportSize();

@@ -1,4 +1,5 @@
-@import url("../../../css/root.css");
+@import url("../../../css/variables.css");
+@import url("./burgerMenu/burgerMenu.style.css");
 
 /* Put here any 'header' specific css */
 
@@ -39,35 +40,38 @@ MEDIA QUERIES
 }
 
 /* Laptops and up ----------- */
-@media (min-width: 1280px) {
+
+.header-links-group {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.header-link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 10% 0 10%;
+    border-bottom: none;
+    color: var(--font-color-header);
+}
+    .header-link:hover {
+        text-decoration: none;
+        background-color: var(--primary-hover);
+    }
+    .header-link:focus {
+        text-decoration: none;
+        background-color: var(--primary-hover);
+    }
+
+
+@media (min-width : 1280px) and (max-width : 1919px) {
     :root {
         --header-height: var(--laptop-header-height);
     }
-    .header-links-group {
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: 100%;
-    }
-    .header-link {
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 0 10% 0 10%;
-        border-bottom: none;
-        color: var(--font-color-header);
-    }
-        .header-link:hover {
-            text-decoration: none;
-            background-color: var(--primary-hover);
-        }
-        .header-link:focus {
-            text-decoration: none;
-            background-color: var(--primary-hover);
-        }
 }
 
 /* Desktops ----------- */
